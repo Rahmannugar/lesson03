@@ -13,7 +13,7 @@ const App = () => {
       <Counter setCount={setCount}>Count is {count}</Counter>
       <List
         items={["one", "two", "three"]}
-        render={(item: string) => <span className="gold">{item}</span>}
+        render={(item: string) => <span className="bold">{item}</span>}
       />
     </div>
   );
