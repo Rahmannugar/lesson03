@@ -25,7 +25,9 @@ const SecondApp = () => {
   const [count, setCount] = useState<number>(0);
   const [users, setUsers] = useState<User[] | null>(null);
 
-  const inputRef = useRef(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+  console.log(inputRef?.current);
+  console.log(inputRef?.current?.value);
 
   useEffect(() => {
     console.log("mounting");
@@ -45,6 +47,7 @@ const SecondApp = () => {
       <h1>{count}</h1>
       <button onClick={addTwo}>Add</button>
       <h2>{result}</h2>
+      <input type="text" ref={inputRef} />
     </div>
   );
 };
