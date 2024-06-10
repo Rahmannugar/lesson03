@@ -3,6 +3,7 @@ import Counter from "./components/Counter";
 import Heading from "./components/Heading";
 import Section from "./components/Section";
 import List from "./components/List";
+import SecondApp from "./second/SecondApp";
 
 const App = () => {
   const [count, setCount] = useState<number>(1);
@@ -15,6 +16,9 @@ const App = () => {
         items={["one", "two", "three"]}
         render={(item: string) => <span className="bold">{item}</span>}
       />
+
+      <br />
+      <SecondApp />
     </div>
   );
 };
